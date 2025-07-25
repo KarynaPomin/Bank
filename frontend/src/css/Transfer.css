@@ -1,0 +1,61 @@
+/* Link powrotu */
+.main-container a {
+  background: #cde1ff;
+  padding: 10px 15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: #1c1c1c;
+  font-weight: bold;
+}
+
+/* Layout formularza + obraz */
+.form-send-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* Formularz */
+.form-send-block form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 50%;
+}
+
+.form-send-block input {
+  padding: 15px;
+  border: 1px solid #d0d0d0;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-send-block button {
+  background-color: #5eaaff;
+  border: none;
+  color: white;
+  padding: 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-send-block button:hover {
+  background-color: #3c92f0;
+}
+
+/* Obraz lub placeholder */
+.form-send-block img,
+.form-send-block::after {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: #d3d3d3;
+  content: "";
+  display: block;
+}

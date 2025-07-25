@@ -1,0 +1,47 @@
+.blik-block {
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: #58abf360;
+  border: solid black;
+
+  display: grid;
+  place-items: center;
+}
+
+.blik-block button {
+    width: 150px;
+    height: 60px;
+    background: none;
+    border: none;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+    
+.blik-code {
+    grid-column: span 2 / span 2;
+}
+
+.blik-code-valid {
+    grid-row-start: 2;
+}
+
+.blik-code-valid-time {
+    grid-row-start: 2;
+}
+
+.blik-code-progres-time {
+    grid-column: span 2 / span 2;
+    grid-row-start: 3;
+}
+
+.blik-code-copy {
+    grid-column: span 2 / span 2;
+    grid-row-start: 4;
+}
+        

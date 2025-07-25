@@ -1,12 +1,23 @@
-import '../App.css'
+import '../css/Home.css'
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import cardsImg from '../assets/Cards.png'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
+
+    const handleSubmitLogin = (e) => {
+        e.preventDefault();
+        // if (formData.username === 'admin' && formData.password === '1234') {
+        //     navigate('/MyWallet');
+        // } else {
+        //     setError('Nieprawidłowy login lub hasło');
+        // }
+    }
+
     return (
-        <>
+        <main className='home'>
             {/* Start */}
-            <div className='main-block'>
+            <div className='container main-block'>
                 <h1>MyBank</h1>
                 <img src={cardsImg} alt="cards" className='cards-img'/>
 
@@ -28,11 +39,16 @@ const Home = () => {
 
                 </div>
 
-                <div className='form-block'>
-                    <form action="">
-                        <input type="text" placeholder='Email adress'/>
+                {/* TODO: chek if user exist. */}
+                <div className='container form-block'>
+                    <form action="" onSubmit={handleSubmitLogin}> 
+                        <input type="text" placeholder='Email adress'
+                            name="username"
+                            // value={formData.username}
+                            // onChange={handleChange}
+                        />
                         <input type="text" placeholder='Password'/>
-                        <button>Login</button>
+                        <Link to="/MyWallet">Login</Link>
                         <p>Forgot Password</p>
 
                         <p>Don't have an accoount? <a>Sigh up</a></p>
@@ -41,7 +57,7 @@ const Home = () => {
                 </div>
             </div>
 
-        </>             
+        </main>             
     )
 }
 

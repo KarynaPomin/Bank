@@ -1,0 +1,39 @@
+.actionButtons-section button {
+  width: 60px;
+  height: 60px;
+  background: #e2e2e2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+  flex-direction: column;
+  font-weight: bold;
+  transition: background 0.2s ease-in-out;
+}
+
+.grid-card {
+  background: #d6e6ff;
+  color: #333;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px 10px 50px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  gap: 20px;
+}
+
+.grid-card ul {
+    padding: 0;
+    margin: 0;
+    width: 50%;
+}
+
+.grid-card li {
+  list-style: none;
+  padding: 4px 0;
+}

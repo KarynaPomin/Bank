@@ -1,0 +1,147 @@
+.top-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-block .log-out {
+  background: none;
+  width: 100px;
+  font-weight: 600;
+}
+
+
+.wallet-block {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.cards-section {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card-img {
+  height: 140px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Dodaj nową kartę */
+.cards-section > div {
+  width: 220px;
+  height: 140px;
+  border: 2px solid #999;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: #555;
+  background: #f9f9f9;
+  cursor: pointer;
+}
+
+/* Przyciski akcji */
+.actionButtons-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.actionButtons-section a {
+  width: 60px;
+  height: 60px;
+  background: #e2e2e2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+  flex-direction: column;
+  font-weight: bold;
+  transition: background 0.2s ease-in-out;
+}
+
+.actionButtons-section a:hover {
+  background: #c9dfff;
+}
+
+/* Sekcja wydarzeń */
+.lastEvents-section {
+  text-align: left;
+}
+
+.lastEvents-section h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.day-event h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Wydarzenia: income/expense */
+.card-event {
+  background: #c7deff;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px 10px 50px;
+  margin-bottom: 0;
+  border-radius: 10px;
+  font-weight: bold;
+  /* width: 90%; */
+}
+
+.title-card-event {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.card-event:hover {
+  background: #accfff;
+}
+
+.grid-card-event {
+  background: #d6e6ff;
+  color: #333;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px 10px 50px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  gap: 20px;
+}
+
+.grid-card-event ul {
+  padding: 0;
+  margin: 0;
+  width: 50%;
+}
+
+.grid-card-event li {
+  list-style: none;
+  padding: 4px 0;
+}
+
+.toggle-btn {
+  margin-right: 10px;
+  background: #accfff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
