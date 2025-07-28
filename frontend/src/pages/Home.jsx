@@ -2,7 +2,6 @@ import '../css/Home.css';
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import cardsImg from '../assets/Cards.png';
 import LoginForm from '../Components/LoginForm';
-import RegisterForm from '../Components/RegisterForm';
 
 const Home = () => {
 
@@ -17,12 +16,11 @@ const Home = () => {
                 <h3>All of your financial needs & transactions in one banking application.</h3>
 
                 <AnchorLink href="#login-block">
-                    {/* <button onClick="">↓</button> */}
+                    <button>↓</button>
                 </AnchorLink>
             </div>
 
-            {/* <LoginForm /> */}
-            <RegisterForm />
+            <LoginForm />
         </main>             
     )
 }
