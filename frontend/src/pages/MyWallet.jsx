@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import '../css/MyWallet.css'
-import BlueCard from "../assets/BlueCard.png"
-import BlackCard from "../assets/BlackCard.png"
+import BlueCard from "../assets/CartBlueBalance.png"
+import BlackCard from "../assets/CartBlackBalance.png"
 import { useState } from 'react'
 
 const MyWallet = () => {
