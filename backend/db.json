@@ -3,32 +3,81 @@
     {
       "id": "ec56",
       "email": "karl@example.com",
-      "password": "123456"
+      "password": "123456",
+      "balance": 8800,
+      "history": [
+        {
+          "date": "2025-07-29T10:24:00Z",
+          "type": "income",
+          "amount": 150,
+          "description": "Freelance payment"
+        },
+        {
+          "date": "2025-07-29T14:35:00Z",
+          "type": "expense",
+          "amount": 25.5,
+          "description": "Lunch at cafe"
+        },
+        {
+          "date": "2025-07-29T16:35:00Z",
+          "type": "expense",
+          "amount": 6.99,
+          "description": "Lunch at cafe"
+        },
+        {
+          "date": "2025-07-28T16:35:00Z",
+          "type": "expense",
+          "amount": 36.5,
+          "description": "McDonalds"
+        },
+        {
+          "date": "2025-07-28T16:35:00Z",
+          "type": "expense",
+          "amount": 12.5,
+          "description": "Lunch at cafe"
+        },
+        {
+          "date": "2025-07-27T16:35:00Z",
+          "type": "expense",
+          "amount": 36.5,
+          "description": "Lunch at cafe"
+        }
+      ]
     },
     {
       "id": "bae2",
       "email": "malt@example.com",
-      "password": "swdsddwd"
+      "password": "swdsddwd",
+      "balance": 1110,
+      "history": []
     },
     {
       "id": "0677",
       "email": "karl@cdrcf.com",
-      "password": "csrfrff"
+      "password": "csrfrff",
+      "balance": 0,
+      "history": []
     },
     {
       "id": "b005",
       "email": "karyna.pomin@gmail.com",
-      "password": "123456"
+      "password": "123456",
+      "balance": 120,
+      "history": []
     },
     {
       "id": "e0e0",
       "email": "karl22@example.com",
-      "password": "12ws12ws"
+      "password": "12ws12ws",
+      "balance": 130,
+      "history": []
     },
     {
       "id": "ad64",
       "email": "karyna.pomin444@gmail.com",
-      "password": "1qaz2wsx"
+      "password": "1qaz2wsx",
+      "balance": 140,
+      "history": []
     }
   ]
 }

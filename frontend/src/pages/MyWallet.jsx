@@ -1,64 +1,77 @@
-import { Link } from 'react-router-dom'
+import { data, Link } from 'react-router-dom'
 import '../css/MyWallet.css'
 import BlueCard from "../assets/CartBlueBalance.png"
 import BlackCard from "../assets/CartBlackBalance.png"
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { loginUser } from '../services/authService'
+import { User } from '../../classes/User'
+import LastEventList from '../components/LastEventList'
+import { useForm } from 'react-hook-form'
+import { email } from 'zod'
+
 
 const MyWallet = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [user, setUser] = useState(User.get());
 
+    useEffect(() => {
+        setUser(User.get());
+    }, []);
+
+    const handleBalanceChange = async () => {
+        User.setBalance(200); 
+        setUser(User.get());
+    };
+
+
+    const groupedByDate = user.history.reduce((acc, event) => {
+        (acc[
+            new Date(event.date).toLocaleDateString("en", {
+                year: "numeric",
+                day: "2-digit",
+                month: "long",
+            })
+        ] = acc[
+            new Date(event.date).toLocaleDateString("en", {
+                year: "numeric",
+                day: "2-digit",
+                month: "long",
+            })
+        ] || []).push(event);
+        return acc;
+    }, {});
+    
     return (
         <div className='main-container'>
             <div className='top-block'>
                 <h1 className="logo">My Wallet</h1>
-                <Link to="/" className='log-out'>Log out</Link>
+                <Link to="/" className='log-out' onClick={() => User.clear()}>Log out</Link>
             </div>
             <div className='wallet-block'>
                 <div className='cards-section'>
+                    {/* // TODO: Add in css bg: card */}
                     <img src={BlueCard} alt="card" className='card-img' />
                     <img src={BlackCard} alt="card" className='card-img' />
-                    <span className='card-img'></span>
+                    <span className='card-img'>{}</span>
                 </div>
+                <p className='balance'>{user?.balance}</p>
 
                 <div className='actionButtons-section'>
                     <Link to="/MyWallet/Blik">BLIK</Link>
                     <Link to="/MyWallet/Transfer">Transfer</Link>
                     <Link to="/MyWallet/History">History</Link>
+                    <button onClick={handleBalanceChange}>Balance</button>
                 </div>
 
                 <div className='lastEvents-section'>
                     <h2>Last Events</h2>
-
-                    {/* // TODO: Component */}
-                    <div className='day-event'>
-                        <h3>23 July 2025</h3>
-
-                        <div className='card-event'>
-                            <div className='title-card-event'>
-                                <p>Expenses</p>
-                                <p>$64.98</p>
-                            </div>
-
-                            <p className="toggle-btn" onClick={() => setIsOpen(!isOpen)}>
-                                {isOpen ? "▼" : "▶" }
-                            </p>
+                    
+                    {Object.entries(groupedByDate).map(([date, events]) => (
+                        <div key={date} className='day-event'>
+                            <h3>{date}</h3>
+                            <LastEventList key={date} events={events}/>
+                            
                         </div>
-                        
-                        {isOpen && (
-                                <div className='grid-card-event'>
-                                    <ul>
-                                        <li>Expenses</li>
-                                        <li>Expenses</li>
-                                        <li>Expenses</li>
-                                    </ul>
-                                    <ul>
-                                        <li>$36.00</li>
-                                        <li>$36.00</li>
-                                        <li>$36.00</li>
-                                    </ul>
-                                </div>
-                            )}
-                    </div>
+                    ))}
                 </div>
             </div>
         </div>

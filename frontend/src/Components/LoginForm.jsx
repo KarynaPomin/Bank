@@ -1,9 +1,10 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { loginSchema, registerSchema } from "../schemas/userSchema";
-import { loginUser, registerUser } from "../services/authService";
+import { getLoggedUser, loginUser, registerUser } from "../services/authService";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { User } from '../../classes/User'
 
 const LoginForm = () => {
     const [isRegistered, setIsRegistred] = useState(true);
@@ -34,8 +35,10 @@ const LoginForm = () => {
             const result = await loginUser(data.email, data.password);
             alert(result.message);
 
-            if (result.success)
+            if (result.success){
+                new User(result.user);
                 navigate("/MyWallet");
+            }
         };
         
         return (<form onSubmit={ handleSubmit(onSubmit) } className='container form-block'>

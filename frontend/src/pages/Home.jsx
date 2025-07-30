@@ -1,7 +1,7 @@
 import '../css/Home.css';
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import cardsImg from '../assets/Cards.png';
-import LoginForm from '../Components/LoginForm';
+import LoginForm from '../components/LoginForm';
 
 const Home = () => {
 
