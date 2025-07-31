@@ -1,13 +1,8 @@
 import { data, Link } from 'react-router-dom'
 import '../css/MyWallet.css'
 import { useEffect, useState } from 'react'
-import { loginUser } from '../services/authService'
 import { User } from '../../classes/User'
 import LastEventList from '../components/LastEventList'
-import cardImg from '../assets/BlueCard.png'
-import { useForm } from 'react-hook-form'
-import { email } from 'zod'
-
 
 const MyWallet = () => {
     const [user, setUser] = useState(User.get());
