@@ -4,7 +4,7 @@
       "id": "ec56",
       "email": "karl@example.com",
       "password": "123456",
-      "balance": 8800,
+      "balance": 17200,
       "history": [
         {
           "date": "2025-07-29T10:24:00Z",
@@ -15,31 +15,31 @@
         {
           "date": "2025-07-29T14:35:00Z",
           "type": "expense",
-          "amount": 25.5,
+          "amount": -25.5,
           "description": "Lunch at cafe"
         },
         {
           "date": "2025-07-29T16:35:00Z",
           "type": "expense",
-          "amount": 6.99,
+          "amount": -6.99,
           "description": "Lunch at cafe"
         },
         {
           "date": "2025-07-28T16:35:00Z",
           "type": "expense",
-          "amount": 36.5,
+          "amount": -36.5,
           "description": "McDonalds"
         },
         {
           "date": "2025-07-28T16:35:00Z",
           "type": "expense",
-          "amount": 12.5,
+          "amount": -12.5,
           "description": "Lunch at cafe"
         },
         {
           "date": "2025-07-27T16:35:00Z",
           "type": "expense",
-          "amount": 36.5,
+          "amount": -36.5,
           "description": "Lunch at cafe"
         }
       ]

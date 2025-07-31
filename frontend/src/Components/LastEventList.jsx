@@ -17,6 +17,7 @@ const LastEventList = ({ events }) => {
 
 function Card({ type, events }) {
     const [isOpen, setIsOpen] = useState(false);
+    const sum = events.reduce((total, event) => total + event.amount, 0);
 
     return (
         <>
@@ -24,7 +25,7 @@ function Card({ type, events }) {
                 <div className='title-card-event'>
                     <p>{type}</p>
                     {/* // TODO: Add counter */}
-                    <p>---</p>
+                    <p>{sum}</p>
                 </div>
                 <p className="toggle-btn" onClick={() => setIsOpen(!isOpen)}>
                     {isOpen ? "▼" : "▶"}
