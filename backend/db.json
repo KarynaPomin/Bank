@@ -4,7 +4,8 @@
       "id": "ec56",
       "email": "karl@example.com",
       "password": "123456",
-      "balance": 17200,
+      "balance": 21600,
+      "creditBalance": 1000000,
       "history": [
         {
           "date": "2025-07-29T10:24:00Z",
@@ -49,6 +50,7 @@
       "email": "malt@example.com",
       "password": "swdsddwd",
       "balance": 1110,
+      "creditBalance": 1000000,
       "history": []
     },
     {
@@ -56,6 +58,7 @@
       "email": "karl@cdrcf.com",
       "password": "csrfrff",
       "balance": 0,
+      "creditBalance": 1000000,
       "history": []
     },
     {
@@ -63,6 +66,7 @@
       "email": "karyna.pomin@gmail.com",
       "password": "123456",
       "balance": 120,
+      "creditBalance": 1000000,
       "history": []
     },
     {
@@ -70,6 +74,7 @@
       "email": "karl22@example.com",
       "password": "12ws12ws",
       "balance": 130,
+      "creditBalance": 1000000,
       "history": []
     },
     {
@@ -77,6 +82,7 @@
       "email": "karyna.pomin444@gmail.com",
       "password": "1qaz2wsx",
       "balance": 140,
+      "creditBalance": 1000000,
       "history": []
     }
   ]

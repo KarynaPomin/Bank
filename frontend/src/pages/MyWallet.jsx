@@ -1,11 +1,10 @@
 import { data, Link } from 'react-router-dom'
 import '../css/MyWallet.css'
-import BlueCard from "../assets/CartBlueBalance.png"
-import BlackCard from "../assets/CartBlackBalance.png"
 import { useEffect, useState } from 'react'
 import { loginUser } from '../services/authService'
 import { User } from '../../classes/User'
 import LastEventList from '../components/LastEventList'
+import cardImg from '../assets/BlueCard.png'
 import { useForm } from 'react-hook-form'
 import { email } from 'zod'
 
@@ -52,12 +51,14 @@ const MyWallet = () => {
             </div>
             <div className='wallet-block'>
                 <div className='cards-section'>
-                    {/* // TODO: Add in css bg: card */}
-                    <img src={BlueCard} alt="card" className='card-img' />
-                    <img src={BlackCard} alt="card" className='card-img' />
-                    <span className='card-img'>{}</span>
+                    <div className='card-img card-blue'>
+                        <p className='balance'>{user?.balance}</p>
+                    </div>
+                    <div className='card-img card-black'>
+                        <p className='balance'>{user?.creditBalance}</p>
+                    </div>
                 </div>
-                <p className='balance'>{user?.balance}</p>
+                
 
                 <div className='actionButtons-section'>
                     <Link to="/MyWallet/Blik">BLIK</Link>
