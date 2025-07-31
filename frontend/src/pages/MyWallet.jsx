@@ -12,6 +12,8 @@ import { email } from 'zod'
 
 const MyWallet = () => {
     const [user, setUser] = useState(User.get());
+    const [isHistory, setIsHistory] = useState(user.history.length !== 0 ? true : false);
+    console.log("history: ", isHistory);
 
     useEffect(() => {
         setUser(User.get());
@@ -22,23 +24,25 @@ const MyWallet = () => {
         setUser(User.get());
     };
 
-
-    const groupedByDate = user.history.reduce((acc, event) => {
-        (acc[
-            new Date(event.date).toLocaleDateString("en", {
-                year: "numeric",
-                day: "2-digit",
-                month: "long",
-            })
-        ] = acc[
-            new Date(event.date).toLocaleDateString("en", {
-                year: "numeric",
-                day: "2-digit",
-                month: "long",
-            })
-        ] || []).push(event);
-        return acc;
-    }, {});
+    let groupedByDate = [];
+    if (isHistory) {
+        groupedByDate = user.history.reduce((acc, event) => {
+            (acc[
+                new Date(event.date).toLocaleDateString("en", {
+                    year: "numeric",
+                    day: "2-digit",
+                    month: "long",
+                })
+            ] = acc[
+                new Date(event.date).toLocaleDateString("en", {
+                    year: "numeric",
+                    day: "2-digit",
+                    month: "long",
+                })
+            ] || []).push(event);
+            return acc;
+        }, {});
+    }
     
     return (
         <div className='main-container'>
@@ -65,13 +69,16 @@ const MyWallet = () => {
                 <div className='lastEvents-section'>
                     <h2>Last Events</h2>
                     
-                    {Object.entries(groupedByDate).map(([date, events]) => (
-                        <div key={date} className='day-event'>
-                            <h3>{date}</h3>
-                            <LastEventList key={date} events={events}/>
-                            
-                        </div>
-                    ))}
+                    {isHistory ? (
+                        Object.entries(groupedByDate).map(([date, events]) => (
+                            <div key={date} className='day-event'>
+                                <h3>{date}</h3>
+                                <LastEventList key={date} events={events}/>
+                            </div>
+                        ))
+                    ) : (
+                        <p className='error'>No transactions were made.</p>
+                    )}
                 </div>
             </div>
         </div>
