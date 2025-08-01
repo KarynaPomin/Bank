@@ -70,3 +70,42 @@
   margin: 0;
   color: #333;
 }
+
+/* FilterPanel */
+.filter-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-option input {
+  width: 20px;
+}
+
+.filter-option label {
+  color: #333;
+}
+
+.filter-range {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #333;
+}
+
+.filter-range input {
+  width: 70%;
+}
+
+
+.filter-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+

@@ -25,8 +25,13 @@ function FilterPanel({ selectedFilter, onClick, onClickFilter }) {
     return (
         <>
             <button onClick={onClick}>Close</button>
-            {renderFilterSettings()}
-            <button onClick={onClickFilter}>Filter</button>
+            <form action="">
+                {renderFilterSettings()}
+                <div className="filter-buttons">
+                    <button>Clear</button>
+                    <button onClick={onClickFilter} >Apply</button>
+                </div>
+            </form>
         </>
     );
 }
