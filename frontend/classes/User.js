@@ -1,4 +1,3 @@
-import { use } from "react";
 import { updateUserBalance } from "../src/services/authService";
 
 export class User {
@@ -7,7 +6,6 @@ export class User {
   constructor(user) {
     localStorage.setItem("loggedUser", JSON.stringify(user));
     this.user = user;
-    // this.balance = user.balance
     console.log("Constructor create user: ", user)
   }
   
@@ -48,10 +46,12 @@ export class User {
   }
 
 
-//   static getHistory() {
-//     const user = this.user;
-//     return user?.history || [];
-//   }
+  static getHistory() {
+    const user = this.user;
+
+    console.log("Get history: ", user.history)
+    return user?.history || [];
+  }
 
 //   static setHistory(historyArray) {
 //     const user = this.get();

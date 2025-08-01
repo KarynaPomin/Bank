@@ -1,8 +1,8 @@
-function HistoryEvent({ events }) {
+function HistoryEvent({ events, index }) {
     return (
         <>
-            {events.map((event) => (
-                <div className='grid-card'>
+            {events.map((event, index) => (
+                <div key={index} className='grid-card'>
                     <p>{event.description}</p>
                     <p>{event.amount}</p>
                 </div>

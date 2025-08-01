@@ -7,37 +7,43 @@
       "balance": 21600,
       "creditBalance": 1000000,
       "history": [
-        {
+        {  
+          "id": 1,
           "date": "2025-07-29T10:24:00Z",
           "type": "income",
           "amount": 150,
           "description": "Freelance payment"
         },
         {
+          "id": 2,
           "date": "2025-07-29T14:35:00Z",
           "type": "expense",
           "amount": -25.5,
           "description": "Lunch at cafe"
         },
         {
+          "id": 3,
           "date": "2025-07-29T16:35:00Z",
           "type": "expense",
           "amount": -6.99,
           "description": "Lunch at cafe"
         },
         {
+          "id": 4,
           "date": "2025-07-28T16:35:00Z",
           "type": "expense",
           "amount": -36.5,
           "description": "McDonalds"
         },
         {
+          "id": 5,
           "date": "2025-07-28T16:35:00Z",
           "type": "expense",
           "amount": -12.5,
           "description": "Lunch at cafe"
         },
         {
+          "id": 6,
           "date": "2025-07-27T16:35:00Z",
           "type": "expense",
           "amount": -36.5,
@@ -52,38 +58,6 @@
       "balance": 1110,
       "creditBalance": 1000000,
       "history": []
-    },
-    {
-      "id": "0677",
-      "email": "karl@cdrcf.com",
-      "password": "csrfrff",
-      "balance": 0,
-      "creditBalance": 1000000,
-      "history": []
-    },
-    {
-      "id": "b005",
-      "email": "karyna.pomin@gmail.com",
-      "password": "123456",
-      "balance": 120,
-      "creditBalance": 1000000,
-      "history": []
-    },
-    {
-      "id": "e0e0",
-      "email": "karl22@example.com",
-      "password": "12ws12ws",
-      "balance": 130,
-      "creditBalance": 1000000,
-      "history": []
-    },
-    {
-      "id": "ad64",
-      "email": "karyna.pomin444@gmail.com",
-      "password": "1qaz2wsx",
-      "balance": 140,
-      "creditBalance": 1000000,
-      "history": []
     }
-  ]
+    ]
 }
