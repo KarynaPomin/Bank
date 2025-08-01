@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom'
 import { User } from '../../classes/User';
 import HistoryEvent from '../components/HistoryEvent';
 import { date } from 'zod';
+import FilterPanel from '../components/FilterPanel';
 
-const FilterTypes = {
+export const FilterTypes = {
     None: "none",
     Date: "date",
     Amount: "amount",
@@ -95,7 +96,7 @@ const History = () => {
     function FilteredByDate(date) {
     console.log("FILTER: Date");
 
-    const selectedDate =  new Date(date).toLocaleDateString("en", {
+        const selectedDate =  new Date(date).toLocaleDateString("en", {
             year: "numeric",
             day: "2-digit",
             month: "long",
@@ -146,14 +147,17 @@ const History = () => {
         <>
             {isOpenFilter && (
                 <div className='filter-container'>
-                    <button onClick={() => {
-                        setIsOpenFilter(false);
-                        setDisplayedHistory(user.history);
-                    }}>Close</button>
+                    <FilterPanel 
+                        selectedFilter={selectedFilter}
+                        onClick={() => {
+                            setIsOpenFilter(false);
+                            setDisplayedHistory(user.history);
+                        }}
+                        onClickFilter={
+                            () => handleFiltredOnClick()
+                        }
 
-                    <p>Filter</p>
-
-                    <button onClick={() => handleFiltredOnClick()}>Filter</button>
+                    />
                 </div>
             )}
             

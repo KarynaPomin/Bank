@@ -64,8 +64,9 @@
   cursor: pointer;
 }
 
-.filter-container > p {
+.filter-container p {
   font-size: 24px;
   font-weight: bold;
   margin: 0;
+  color: #333;
 }
